@@ -1,9 +1,7 @@
-
 .home-main {
     padding-top: 40px;
     padding-bottom: 80px;
 }
-
 
 .search-hero {
     padding: 44px;
@@ -22,45 +20,7 @@
     max-width: 620px;
     margin-bottom: 30px;
     color: #707070;
-    font-size: 16px;
 }
-
-.search-field {
-    min-height: 76px;
-    padding: 11px 16px;
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
-    background-color: #ffffff;
-}
-
-.search-field label {
-    display: block;
-    margin-bottom: 4px;
-    color: #707070;
-    font-size: 13px;
-}
-
-.search-field .form-select,
-.search-field .form-control {
-    min-width: 0;
-    min-height: 30px;
-    padding: 3px 0;
-    border: 0;
-    border-radius: 0;
-    color: #202020;
-    background-color: transparent;
-    font-size: 15px;
-}
-
-.search-field .form-select {
-    padding-right: 24px;
-    background-position: right center;
-}
-
-#cinema-page .search-button {
-    min-height: 76px;
-}
-
 
 .home-section {
     margin-top: 44px;
@@ -70,46 +30,6 @@
     margin-bottom: 24px;
     font-size: 28px;
 }
-
-
-.movie-card {
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    background-color: transparent;
-}
-
-
-.movie-poster {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    background-color: #f5f5f3;
-}
-
-.movie-card .card-body {
-    display: flex;
-    flex-direction: column;
-    padding: 18px 0 0;
-}
-
-.movie-title {
-    margin-bottom: 8px;
-    font-size: 18px;
-}
-
-.movie-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px 8px;
-    margin: 0 0 18px;
-    padding: 0;
-    color: #707070;
-    list-style: none;
-    font-size: 13px;
-}
-
 
 .benefits-grid {
     display: grid;
@@ -121,11 +41,9 @@
 }
 
 .benefit-card {
-    min-width: 0;
     padding: 26px;
     border: 1px solid #e5e5e5;
     border-radius: 12px;
-    background-color: #ffffff;
 }
 
 .benefit-number {
@@ -148,7 +66,6 @@
     line-height: 1.7;
 }
 
-
 @media (max-width: 991px) {
     .search-hero {
         padding: 32px;
@@ -166,7 +83,6 @@
         padding: 22px;
     }
 }
-
 
 @media (max-width: 575px) {
     .home-main {
@@ -186,10 +102,6 @@
     .search-hero p {
         margin-bottom: 24px;
         font-size: 15px;
-    }
-
-    #cinema-page .search-button {
-        min-height: 48px;
     }
 
     .home-section {
