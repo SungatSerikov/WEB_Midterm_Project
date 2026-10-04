@@ -134,7 +134,7 @@
 }
 
 .seat.selected {
-    background-color: #202020;
+    background-color: #c94228;
     border-color: #202020;
     color: #ffffff;
 }
@@ -168,7 +168,7 @@
 }
 
 .badge-selected {
-    background-color: #202020;
+    background-color: #c94228;
 }
 
 .badge-occupied {
@@ -316,7 +316,7 @@
     padding: 12px 20px;
     border: 0;
     border-radius: 8px;
-    background-color: #202020;
+    background-color: #c94228;
     color: #ffffff;
     font-size: 15px;
     font-weight: bold;
