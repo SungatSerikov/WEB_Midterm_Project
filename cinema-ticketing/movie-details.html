@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cinema+ | Dune: Part Two</title>
+        <link rel="icon" href="../assets/images/favicon.svg">
+        <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/common.css">
+        <link rel="stylesheet" href="../css/movie-details.css">
+    </head>
+    <body id="cinema-page">
+        <header class="site-header">
+            <nav class="container site-container header-layout">
+                <a class="brand" href="index.html">
+                    <img src="../assets/images/logo.svg" alt="Cinema+" width="146" height="32">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="movies.html">Movies<span class="nav-underline"></span></a></li>
+                    <li><span class="unavailable">My Tickets</span></li>
+                    <li><a href="#site-info">Help</a></li>
+                </ul>
+                <button class="btn btn-cinema-outline sign-in-button" type="button" disabled>Sign In</button>
+            </nav>
+        </header>
+
+        <main class="container site-container details-main">
+            <nav class="detail-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <a href="movies.html">Movies</a>
+                <span>› Dune: Part Two</span>
+            </nav>
+
+            <section class="row g-4 movie-overview">
+                <div class="col-12 col-md-4 col-lg-3">
+                    <img class="movie-poster" src="../assets/images/posters/dune-part-two.jpg"
+                        alt="Dune: Part Two poster">
+                </div>
+                <div class="col-12 col-md-8 col-lg-9">
+                    <h1>Dune: Part Two</h1>
+                    <p class="movie-meta">Sci-Fi · Action · Adventure · 2h 46m · 12+ · PG-13</p>
+                    <h2>Synopsis</h2>
+                    <p class="synopsis">Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the universe, he endeavors to prevent a terrible future only he can foresee.</p>
+                    <table class="movie-facts">
+                        <tr>
+                            <th>Director</th>
+                            <td>Denis Villeneuve</td>
+                        </tr>
+                        <tr>
+                            <th>Cast</th>
+                            <td>Timothée Chalamet, Zendaya, Rebecca Ferguson, Josh Brolin, Austin Butler, Florence Pugh</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <section class="showtimes">
+                <h2>Choose Showtime</h2>
+                <p class="schedule-note">Demo schedule · 12–16 October 2026. The same showtimes apply to each date.</p>
+                <form action="seat-selection.html" method="get">
+                    <div class="date-field">
+                        <label class="form-label" for="show-date">Date</label>
+                        <select class="form-select" id="show-date" name="date">
+                            <option value="2026-10-12">Mon, 12 Oct</option>
+                            <option value="2026-10-13">Tue, 13 Oct</option>
+                            <option value="2026-10-14">Wed, 14 Oct</option>
+                            <option value="2026-10-15">Thu, 15 Oct</option>
+                            <option value="2026-10-16">Fri, 16 Oct</option>
+                        </select>
+                    </div>
+                    <div class="cinema-group">
+                        <h3>Cinema Star – Esentai Mall</h3>
+                        <div class="showtime-options">
+                            <label class="showtime">
+                                <input type="radio" name="session" value="esentai-1030-3d">
+                                <span>10:30<small>3D</small></span>
+                            </label>
+                            <label class="showtime">
+                                <input type="radio" name="session" value="esentai-1345-imax-3d" checked>
+                                <span>13:45<small>IMAX 3D</small></span>
+                            </label>
+                            <label class="showtime">
+                                <input type="radio" name="session" value="esentai-1700-2d">
+                                <span>17:00<small>2D</small></span>
+                            </label>
+                            <label class="showtime">
+                                <input type="radio" name="session" value="esentai-2030-imax-3d">
+                                <span>20:30<small>IMAX 3D</small></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="cinema-group">
+                        <h3>Aspan Cinema – Keruen</h3>
+                        <div class="showtime-options">
+                            <label class="showtime">
+                                <input type="radio" name="session" value="keruen-1100-2d">
+                                <span>11:00<small>2D</small></span>
+                            </label>
+                            <label class="showtime">
+                                <input type="radio" name="session" value="keruen-1515-2d">
+                                <span>15:15<small>2D</small></span>
+                            </label>
+                            <label class="showtime">
+                                <input type="radio" name="session" value="keruen-1830-3d">
+                                <span>18:30<small>3D</small></span>
+                            </label>
+                            <label class="showtime">
+                                <input type="radio" name="session" value="keruen-2145-3d">
+                                <span>21:45<small>3D</small></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="booking-summary">
+                        <div>
+                            <h3>Dune: Part Two</h3>
+                            <p class="mb-0">Choose a showtime above, then select your seats.</p>
+                        </div>
+                        <button class="btn btn-cinema" type="submit">Select seats</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer class="site-footer" id="site-info">
+            <div class="container site-container footer-layout">
+                <div>
+                    <a class="footer-brand" href="index.html">CINEMA+</a>
+                    <p class="mb-0">Easy online cinema booking</p>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="mailto:support@cinemaplus.kz">Contact: support@cinemaplus.kz</a></li>
+                    <li><a href="#site-info">Terms</a></li>
+                    <li><small>© 2026 Cinema+</small></li>
+                </ul>
+            </div>
+            <p class="container site-container demo-note">Student demo. Filtering, accounts and booking are not available yet. No payments are accepted.</p>
+        </footer>
+    </body>
+</html>
