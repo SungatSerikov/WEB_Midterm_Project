@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cinema+ | Seat Selection</title>
+        <link rel="icon" href="../assets/images/favicon.svg">
+        <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/common.css">
+        <link rel="stylesheet" href="../css/seat-selection.css">
+    </head>
+    <body id="cinema-page">
+        <header class="site-header">
+            <nav class="container site-container header-layout">
+                <a class="brand" href="index.html">
+                    <img src="../assets/images/logo.svg" alt="Cinema+" width="146" height="32">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="movies.html">Movies<span class="nav-underline"></span></a></li>
+                    <li><span class="unavailable">My Tickets</span></li>
+                    <li><a href="#site-info">Help</a></li>
+                </ul>
+                <button class="btn btn-cinema-outline sign-in-button" type="button" disabled>Sign In</button>
+            </nav>
+        </header>
+
+        <main class="container site-container seats-main">
+            <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="movies.html">Movies</a></li>
+                    <li class="breadcrumb-item"><a href="movie-details.html?movie=dune-part-two">Dune: Part Two</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Seat Selection</li>
+                </ol>
+            </nav>
+
+            <section class="session-info-bar">
+                <div class="info-block">
+                    <span class="info-label">Movie</span>
+                    <span class="info-value">Dune: Part Two</span>
+                </div>
+                <div class="info-block">
+                    <span class="info-label">Cinema</span>
+                    <span class="info-value">Cinema Star - Esentai Mall</span>
+                </div>
+                <div class="info-block">
+                    <span class="info-label">Date &amp; Time</span>
+                    <span class="info-value">Today, 12 Oct • 13:45</span>
+                </div>
+            </section>
+
+            <div class="row g-4 align-items-start mt-2">
+                <div class="col-12 col-lg-7">
+                    <div class="hall-layout-card">
+                        <div class="screen-indicator">
+                            <span class="screen-text">SCREEN / STAGE</span>
+                            <div class="screen-line"></div>
+                        </div>
+
+                        <div class="seats-matrix">
+                            <div class="seat-row">
+                                <span class="row-label">A</span>
+                                <button type="button" class="seat">1</button>
+                                <button type="button" class="seat">2</button>
+                                <button type="button" class="seat">3</button>
+                                <button type="button" class="seat">4</button>
+                                <button type="button" class="seat">5</button>
+                                <button type="button" class="seat">6</button>
+                                <button type="button" class="seat">7</button>
+                                <button type="button" class="seat">8</button>
+                                <button type="button" class="seat">9</button>
+                                <button type="button" class="seat">10</button>
+                                <button type="button" class="seat">11</button>
+                                <button type="button" class="seat">12</button>
+                                <span class="row-label">A</span>
+                            </div>
+
+                            <div class="seat-row">
+                                <span class="row-label">B</span>
+                                <button type="button" class="seat occupied" disabled>1</button>
+                                <button type="button" class="seat occupied" disabled>2</button>
+                                <button type="button" class="seat occupied" disabled>3</button>
+                                <button type="button" class="seat occupied" disabled>4</button>
+                                <button type="button" class="seat">5</button>
+                                <button type="button" class="seat">6</button>
+                                <button type="button" class="seat">7</button>
+                                <button type="button" class="seat">8</button>
+                                <button type="button" class="seat">9</button>
+                                <button type="button" class="seat">10</button>
+                                <button type="button" class="seat">11</button>
+                                <button type="button" class="seat">12</button>
+                                <span class="row-label">B</span>
+                            </div>
+
+                            <div class="seat-row">
+                                <span class="row-label">C</span>
+                                <button type="button" class="seat">1</button>
+                                <button type="button" class="seat">2</button>
+                                <button type="button" class="seat">3</button>
+                                <button type="button" class="seat">4</button>
+                                <button type="button" class="seat">5</button>
+                                <button type="button" class="seat">6</button>
+                                <button type="button" class="seat">7</button>
+                                <button type="button" class="seat">8</button>
+                                <button type="button" class="seat">9</button>
+                                <button type="button" class="seat">10</button>
+                                <button type="button" class="seat">11</button>
+                                <button type="button" class="seat">12</button>
+                                <span class="row-label">C</span>
+                            </div>
+
+                            <div class="seat-row">
+                                <span class="row-label">D</span>
+                                <button type="button" class="seat">1</button>
+                                <button type="button" class="seat">2</button>
+                                <button type="button" class="seat">3</button>
+                                <button type="button" class="seat">4</button>
+                                <button type="button" class="seat selected">5</button>
+                                <button type="button" class="seat selected">6</button>
+                                <button type="button" class="seat">7</button>
+                                <button type="button" class="seat">8</button>
+                                <button type="button" class="seat">9</button>
+                                <button type="button" class="seat">10</button>
+                                <button type="button" class="seat">11</button>
+                                <button type="button" class="seat">12</button>
+                                <span class="row-label">D</span>
+                            </div>
+
+                            <div class="seat-row">
+                                <span class="row-label">E</span>
+                                <button type="button" class="seat">1</button>
+                                <button type="button" class="seat">2</button>
+                                <button type="button" class="seat">3</button>
+                                <button type="button" class="seat">4</button>
+                                <button type="button" class="seat">5</button>
+                                <button type="button" class="seat">6</button>
+                                <button type="button" class="seat">7</button>
+                                <button type="button" class="seat">8</button>
+                                <button type="button" class="seat">9</button>
+                                <button type="button" class="seat">10</button>
+                                <button type="button" class="seat">11</button>
+                                <button type="button" class="seat">12</button>
+                                <span class="row-label">E</span>
+                            </div>
+
+                            <div class="seat-row">
+                                <span class="row-label">F</span>
+                                <button type="button" class="seat">1</button>
+                                <button type="button" class="seat">2</button>
+                                <button type="button" class="seat">3</button>
+                                <button type="button" class="seat">4</button>
+                                <button type="button" class="seat">5</button>
+                                <button type="button" class="seat">6</button>
+                                <button type="button" class="seat">7</button>
+                                <button type="button" class="seat">8</button>
+                                <button type="button" class="seat occupied" disabled>9</button>
+                                <button type="button" class="seat occupied" disabled>10</button>
+                                <button type="button" class="seat occupied" disabled>11</button>
+                                <button type="button" class="seat occupied" disabled>12</button>
+                                <span class="row-label">F</span>
+                            </div>
+
+                            <div class="seat-row">
+                                <span class="row-label">G</span>
+                                <button type="button" class="seat">1</button>
+                                <button type="button" class="seat">2</button>
+                                <button type="button" class="seat">3</button>
+                                <button type="button" class="seat">4</button>
+                                <button type="button" class="seat">5</button>
+                                <button type="button" class="seat">6</button>
+                                <button type="button" class="seat">7</button>
+                                <button type="button" class="seat">8</button>
+                                <button type="button" class="seat">9</button>
+                                <button type="button" class="seat">10</button>
+                                <button type="button" class="seat">11</button>
+                                <button type="button" class="seat">12</button>
+                                <span class="row-label">G</span>
+                            </div>
+
+                            <div class="seat-row">
+                                <span class="row-label">H</span>
+                                <button type="button" class="seat">1</button>
+                                <button type="button" class="seat">2</button>
+                                <button type="button" class="seat occupied" disabled>3</button>
+                                <button type="button" class="seat">4</button>
+                                <button type="button" class="seat">5</button>
+                                <button type="button" class="seat occupied" disabled>6</button>
+                                <button type="button" class="seat">7</button>
+                                <button type="button" class="seat">8</button>
+                                <button type="button" class="seat occupied" disabled>9</button>
+                                <button type="button" class="seat">10</button>
+                                <button type="button" class="seat">11</button>
+                                <button type="button" class="seat occupied" disabled>12</button>
+                                <span class="row-label">H</span>
+                            </div>
+                        </div>
+
+                        <div class="seats-legend">
+                            <div class="legend-item">
+                                <span class="legend-badge badge-available"></span>
+                                <span>Available</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-badge badge-selected"></span>
+                                <span>Selected</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-badge badge-occupied"></span>
+                                <span>Occupied</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-5">
+                    <aside class="selected-seats-card">
+                        <h2>Selected Seats</h2>
+
+                        <div class="selected-list">
+                            <div class="selected-seat-item">
+                                <span class="seat-name">Row D, Seat 5</span>
+                                <span class="seat-cost">2,800 ₸</span>
+                            </div>
+                            <div class="selected-seat-item">
+                                <span class="seat-name">Row D, Seat 6</span>
+                                <span class="seat-cost">2,800 ₸</span>
+                            </div>
+                        </div>
+
+                        <hr class="summary-divider">
+
+                        <h3 class="category-heading">Ticket Category Selector</h3>
+
+                        <div class="category-list">
+                            <div class="category-item">
+                                <div class="category-info">
+                                    <span class="category-title">Adult</span>
+                                    <span class="category-price">2,800 ₸</span>
+                                </div>
+                                <div class="stepper-controls">
+                                    <button type="button" class="stepper-btn">-</button>
+                                    <span class="stepper-count">2</span>
+                                    <button type="button" class="stepper-btn">+</button>
+                                </div>
+                            </div>
+
+                            <div class="category-item">
+                                <div class="category-info">
+                                    <span class="category-title">Student</span>
+                                    <span class="category-price">2,000 ₸</span>
+                                </div>
+                                <div class="stepper-controls">
+                                    <button type="button" class="stepper-btn">-</button>
+                                    <span class="stepper-count">0</span>
+                                    <button type="button" class="stepper-btn">+</button>
+                                </div>
+                            </div>
+
+                            <div class="category-item">
+                                <div class="category-info">
+                                    <span class="category-title">Child</span>
+                                    <span class="category-price">1,500 ₸</span>
+                                </div>
+                                <div class="stepper-controls">
+                                    <button type="button" class="stepper-btn">-</button>
+                                    <span class="stepper-count">0</span>
+                                    <button type="button" class="stepper-btn">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="summary-divider">
+
+                        <div class="total-price-row">
+                            <span class="total-title">Total Price</span>
+                            <span class="total-sum">5,600 ₸</span>
+                        </div>
+
+                        <a class="btn btn-proceed w-100" href="checkout.html">Proceed to checkout</a>
+                    </aside>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer" id="site-info">
+            <div class="container site-container footer-layout">
+                <div>
+                    <a class="footer-brand" href="index.html">CINEMA+</a>
+                    <p class="mb-0">Easy online cinema booking</p>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="mailto:support@cinemaplus.kz">Contact: support@cinemaplus.kz</a></li>
+                    <li><a href="#site-info">Terms</a></li>
+                    <li><small>© 2026 Cinema+</small></li>
+                </ul>
+            </div>
+            <p class="container site-container demo-note">Student demo. Filtering, accounts and booking are not available yet. No payments are accepted.</p>
+        </footer>
+    </body>
+</html>
