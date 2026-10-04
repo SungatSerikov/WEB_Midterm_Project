@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Cinema+ — review your order and complete secure payment.">
+        <title>Cinema+ | Checkout</title>
+        <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+
+        <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/common.css">
+        <link rel="stylesheet" href="../css/checkout.css">
+    </head>
+    <body id="cinema-page">
+        <header class="site-header">
+            <nav class="navbar navbar-expand-md" aria-label="Main navigation">
+                <div class="container site-container">
+                    <a class="navbar-brand brand" href="index.html" aria-label="Cinema+ home">
+                        <img src="../assets/images/logo.svg" alt="" width="146" height="32">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#main-navigation" aria-controls="main-navigation"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="main-navigation">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="movies.html">Movies</a>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link unavailable" type="button" disabled title="Coming soon">My Tickets</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#help-modal">Help</button>
+                            </li>
+                        </ul>
+                        <button class="btn btn-outline-secondary btn-cinema-outline sign-in-button unavailable-button" type="button"
+                            disabled title="Coming soon">Sign In</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container site-container checkout-main" id="main-content">
+            <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="movies.html">Movies</a></li>
+                    <li class="breadcrumb-item"><a href="movie-details.html?movie=dune-part-two">Dune: Part Two</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                </ol>
+            </nav>
+
+            <header class="checkout-header">
+                <h1>Review Your Order</h1>
+                <p>Confirm the details of your selected session</p>
+            </header>
+
+            <div class="row g-4 align-items-start">
+                <div class="col-12 col-lg-7">
+                    <section class="order-summary-card">
+                        <div class="order-movie-header">
+                            <img class="order-movie-poster" src="../assets/images/posters/dune-part-two.jpg"
+                                alt="Dune: Part Two poster" width="80" height="110">
+                            <div class="order-movie-info">
+                                <h2>Dune: Part Two</h2>
+                                <p class="order-movie-meta">Sci-Fi • 2h 46m • Esentai Mall</p>
+                                <p class="order-movie-session">Today, 12 Oct • 13:45 (IMAX 3D)</p>
+                            </div>
+                        </div>
+
+                        <hr class="order-divider">
+
+                        <div class="order-details-table">
+                            <div class="order-row">
+                                <span class="order-label">Selected Seats</span>
+                                <span class="order-value bold-text">Row D, Seats 5, 6</span>
+                            </div>
+                            <div class="order-row">
+                                <span class="order-label">Tickets (2 x Adult)</span>
+                                <span class="order-value bold-text">5,600 ₸</span>
+                            </div>
+                            <div class="order-row">
+                                <span class="order-label">Service Booking Fee</span>
+                                <span class="order-value bold-text">300 ₸</span>
+                            </div>
+                        </div>
+
+                        <hr class="order-divider">
+
+                        <div class="order-total-row">
+                            <span class="total-label">Total Amount</span>
+                            <span class="total-price">5,900 ₸</span>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="col-12 col-lg-5">
+                    <section class="payment-card">
+                        <h2>Payment Details</h2>
+
+                        <form class="payment-form" action="#" method="post">
+                            <div class="form-group mb-3">
+                                <label for="cardholder-name">Cardholder Name</label>
+                                <input class="form-control payment-input" id="cardholder-name" name="cardholder"
+                                    type="text" placeholder="ALEX PROKHOROV" required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="card-number">Card Number</label>
+                                <input class="form-control payment-input" id="card-number" name="cardNumber"
+                                    type="text" placeholder="4000 1234 5678 9010" maxlength="19" required>
+                            </div>
+
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="expiry-date">Expiry Date</label>
+                                        <input class="form-control payment-input" id="expiry-date" name="expiry"
+                                            type="text" placeholder="12/28" maxlength="5" required>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="cvv">CVV/CVC</label>
+                                        <input class="form-control payment-input" id="cvv" name="cvv"
+                                            type="password" placeholder="***" maxlength="4" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="promo-code">Promo Code</label>
+                                <div class="input-group promo-group">
+                                    <input class="form-control payment-input" id="promo-code" name="promo"
+                                        type="text" placeholder="Enter code..">
+                                    <button class="btn btn-outline-secondary promo-btn" type="button">Apply</button>
+                                </div>
+                            </div>
+
+                            <div class="form-check terms-check mb-4">
+                                <input class="form-check-input" id="agree-terms" name="agree" type="checkbox" checked required>
+                                <label class="form-check-label" for="agree-terms">
+                                    I agree to the Terms &amp; Conditions and Refund Policy of Cinema+
+                                </label>
+                            </div>
+
+                            <button class="btn btn-pay-confirm w-100" type="submit">Pay &amp; Confirm (5,900 ₸)</button>
+
+                            <p class="ssl-notice">
+                                <span class="lock-icon" aria-hidden="true">&#128274;</span> Secure SSL encrypted payment transaction
+                            </p>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container site-container footer-layout">
+                <div>
+                    <a class="footer-brand" href="index.html">CINEMA+</a>
+                    <p class="mb-0">Easy online cinema booking</p>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="mailto:support@cinemaplus.kz">Contact: support@cinemaplus.kz</a></li>
+                    <li><button class="footer-link" type="button" data-bs-toggle="modal"
+                        data-bs-target="#terms-modal">Terms</button></li>
+                    <li><small>© 2026 Cinema+</small></li>
+                </ul>
+            </div>
+        </footer>
+
+        <div class="modal fade" id="help-modal" tabindex="-1" aria-labelledby="help-heading" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5" id="help-heading">Plan your cinema visit</h2>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ol class="mb-3">
+                            <li>Find a movie in your city.</li>
+                            <li>Choose a cinema and showtime.</li>
+                            <li>Select your seats and review your order.</li>
+                        </ol>
+                        <p class="mb-0">This student demo currently includes the home page. Booking and account features are not available yet.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary btn-cinema" type="button" data-bs-dismiss="modal">Got it</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="terms-modal" tabindex="-1" aria-labelledby="terms-heading" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5" id="terms-heading">About this demo</h2>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Cinema+ is a university midterm project by Kudaibergen Temirlan and Serikov Sunggat.</p>
+                        <p class="mb-0">Movies, age labels and contact details are sample content. This website does not sell tickets, accept payments or issue reservations.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary btn-cinema" type="button" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

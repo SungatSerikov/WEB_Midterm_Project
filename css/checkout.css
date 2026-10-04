@@ -1,0 +1,299 @@
+.checkout-main {
+    padding-top: 24px;
+    padding-bottom: 80px;
+}
+
+.breadcrumb-nav {
+    margin-bottom: 24px;
+}
+
+.breadcrumb {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    padding: 0 8px;
+    color: #707070;
+}
+
+.breadcrumb-item a {
+    color: #707070;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #202020;
+    font-weight: 500;
+}
+
+.checkout-header {
+    margin-bottom: 32px;
+}
+
+.checkout-header h1 {
+    margin: 0 0 8px;
+    font-size: 32px;
+    color: #202020;
+}
+
+.checkout-header p {
+    margin: 0;
+    color: #707070;
+    font-size: 15px;
+}
+
+.order-summary-card {
+    padding: 32px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.order-movie-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.order-movie-poster {
+    display: block;
+    width: 80px;
+    height: 110px;
+    border-radius: 8px;
+    object-fit: cover;
+    background-color: #f5f5f3;
+}
+
+.order-movie-info h2 {
+    margin: 0 0 6px;
+    font-size: 20px;
+    color: #202020;
+}
+
+.order-movie-meta {
+    margin: 0 0 4px;
+    color: #707070;
+    font-size: 14px;
+}
+
+.order-movie-session {
+    margin: 0;
+    color: #202020;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.order-divider {
+    margin: 24px 0;
+    border: 0;
+    border-top: 1px solid #e5e5e5;
+    opacity: 1;
+}
+
+.order-details-table {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.order-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.order-label {
+    color: #707070;
+}
+
+.order-value {
+    color: #202020;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.order-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+}
+
+.total-label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #202020;
+}
+
+.total-price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #202020;
+}
+
+.payment-card {
+    padding: 32px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background-color: #f5f5f3;
+}
+
+.payment-card h2 {
+    margin: 0 0 24px;
+    font-size: 22px;
+    color: #202020;
+}
+
+.payment-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #202020;
+}
+
+.payment-input {
+    min-height: 44px;
+    padding: 10px 14px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #202020;
+}
+
+.payment-input:focus {
+    border-color: #c94228;
+    box-shadow: none;
+}
+
+.promo-group {
+    display: flex;
+}
+
+.promo-group .payment-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.promo-btn {
+    padding: 0 20px;
+    border: 1px solid #e5e5e5;
+    border-left: 0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #ffffff;
+    color: #202020;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.promo-btn:hover {
+    background-color: #f0f0f0;
+    color: #202020;
+    border-color: #e5e5e5;
+}
+
+.terms-check {
+    font-size: 13px;
+    color: #707070;
+}
+
+.terms-check .form-check-input {
+    border-color: #cccccc;
+    border-radius: 4px;
+}
+
+.terms-check .form-check-input:checked {
+    background-color: #202020;
+    border-color: #202020;
+}
+
+.terms-check label {
+    display: inline;
+    font-weight: normal;
+    color: #707070;
+}
+
+.btn-pay-confirm {
+    min-height: 48px;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #202020;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.btn-pay-confirm:hover {
+    background-color: #383838;
+    color: #ffffff;
+}
+
+.ssl-notice {
+    margin: 16px 0 0;
+    text-align: center;
+    font-size: 12px;
+    color: #707070;
+}
+
+.lock-icon {
+    font-size: 12px;
+    margin-right: 4px;
+}
+
+@media (max-width: 991px) {
+    .order-summary-card,
+    .payment-card {
+        padding: 24px;
+    }
+
+    .checkout-header h1 {
+        font-size: 28px;
+    }
+
+    .total-price {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 575px) {
+    .checkout-main {
+        padding-top: 16px;
+        padding-bottom: 48px;
+    }
+
+    .checkout-header h1 {
+        font-size: 24px;
+    }
+
+    .order-movie-header {
+        gap: 14px;
+    }
+
+    .order-movie-poster {
+        width: 65px;
+        height: 90px;
+    }
+
+    .order-movie-info h2 {
+        font-size: 17px;
+    }
+
+    .total-label {
+        font-size: 17px;
+    }
+
+    .total-price {
+        font-size: 22px;
+    }
+}
