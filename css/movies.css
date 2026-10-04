@@ -1,0 +1,114 @@
+.movies-main {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.catalog-intro h1 {
+    margin: 0 0 12px;
+    font-size: 48px;
+}
+
+.catalog-intro p {
+    margin-bottom: 28px;
+    color: #707070;
+}
+
+.catalog-filters {
+    margin: 0;
+    padding: 8px 16px 24px;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    background-color: #f5f5f3;
+}
+
+.catalog-intro .filter-note {
+    margin-top: 14px;
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.catalog-section {
+    margin-top: 32px;
+}
+
+.catalog-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.catalog-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.catalog-categories span,
+.catalog-categories button {
+    padding: 12px 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    color: #999999;
+    background-color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.catalog-categories .active {
+    color: #ffffff;
+    background-color: #c94228;
+    border-color: #c94228;
+}
+
+.catalog-pagination {
+    margin-top: 40px;
+    margin-bottom: 0;
+    color: #707070;
+    font-size: 13px;
+}
+
+@media (max-width: 991px) {
+    .catalog-intro h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    .movies-main {
+        padding-top: 24px;
+        padding-bottom: 48px;
+    }
+
+    .catalog-intro h1 {
+        font-size: 32px;
+    }
+
+    .catalog-intro p {
+        font-size: 15px;
+    }
+
+    .catalog-filters {
+        padding: 4px 12px 20px;
+        border-radius: 12px;
+    }
+
+    .catalog-section h2 {
+        font-size: 24px;
+    }
+
+    .catalog-categories {
+        gap: 6px;
+        margin-bottom: 24px;
+    }
+
+    .catalog-categories span,
+    .catalog-categories button {
+        padding-right: 12px;
+        padding-left: 12px;
+        font-size: 13px;
+    }
+
+    .catalog-pagination {
+        margin-top: 32px;
+    }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cinema+ | Movies</title>
+        <link rel="icon" href="../assets/images/favicon.svg">
+        <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/common.css">
+        <link rel="stylesheet" href="../css/movies.css">
+    </head>
+    <body id="cinema-page">
+        <header class="site-header">
+            <nav class="container site-container header-layout">
+                <a class="brand" href="index.html">
+                    <img src="../assets/images/logo.svg" alt="Cinema+" width="146" height="32">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="movies.html">Movies<span class="nav-underline"></span></a></li>
+                    <li><span class="unavailable">My Tickets</span></li>
+                    <li><a href="#site-info">Help</a></li>
+                </ul>
+                <button class="btn btn-cinema-outline sign-in-button" type="button" disabled>Sign In</button>
+            </nav>
+        </header>
+
+        <main class="container site-container movies-main">
+            <section class="catalog-intro">
+                <h1>Movies</h1>
+                <p>Browse current releases and find the right showtime.</p>
+                <form class="row g-3 align-items-end catalog-filters" action="movies.html" method="get">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <label class="form-label" for="search">Search</label>
+                        <input class="form-control" id="search" name="q" type="text" placeholder="Movie title…">
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <label class="form-label" for="genre">Genre</label>
+                        <select class="form-select" id="genre" name="genre">
+                            <option value="all">All genres</option>
+                            <option value="action">Action</option>
+                            <option value="animation">Animation</option>
+                            <option value="family">Family</option>
+                            <option value="horror">Horror</option>
+                            <option value="sci-fi">Sci-Fi</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <label class="form-label" for="date">Date</label>
+                        <select class="form-select" id="date" name="date">
+                            <option value="any">Any date</option>
+                            <option value="today">Today</option>
+                            <option value="tomorrow">Tomorrow</option>
+                            <option value="this-week">This week</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <button class="btn btn-cinema-outline w-100" type="button" disabled>Apply filters</button>
+                    </div>
+                </form>
+                <p class="filter-note">Filters coming soon. Browse the demo catalogue below.</p>
+            </section>
+
+            <section class="catalog-section">
+                <h2>Now Showing</h2>
+                <div class="catalog-categories">
+                    <span class="active">Now Showing</span>
+                    <button type="button" disabled>Coming Soon</button>
+                    <button type="button" disabled>Popular</button>
+                </div>
+                <div class="row g-4">
+                    <article class="col-12 col-sm-6 col-lg-4 movie-card">
+                        <img class="movie-poster" src="../assets/images/posters/dune-part-two.jpg"
+                            alt="Dune: Part Two poster">
+                        <h3 class="movie-title">Dune: Part Two</h3>
+                        <p class="movie-meta">Sci-Fi · 2h 46m · 12+</p>
+                        <a class="btn btn-cinema-outline mt-auto"
+                            href="movie-details.html?movie=dune-part-two">Book tickets</a>
+                    </article>
+
+                    <article class="col-12 col-sm-6 col-lg-4 movie-card">
+                        <img class="movie-poster" src="../assets/images/posters/inside-out-2.jpg"
+                            alt="Inside Out 2 poster">
+                        <h3 class="movie-title">Inside Out 2</h3>
+                        <p class="movie-meta">Animation · 1h 36m · 6+</p>
+                        <a class="btn btn-cinema-outline mt-auto"
+                            href="movie-details.html?movie=inside-out-2">Book tickets</a>
+                    </article>
+
+                    <article class="col-12 col-sm-6 col-lg-4 movie-card">
+                        <img class="movie-poster" src="../assets/images/posters/the-wild-robot.jpg"
+                            alt="The Wild Robot poster">
+                        <h3 class="movie-title">The Wild Robot</h3>
+                        <p class="movie-meta">Family · 1h 42m · 6+</p>
+                        <a class="btn btn-cinema-outline mt-auto"
+                            href="movie-details.html?movie=the-wild-robot">Book tickets</a>
+                    </article>
+
+                    <article class="col-12 col-sm-6 col-lg-4 movie-card">
+                        <img class="movie-poster" src="../assets/images/posters/alien-romulus.jpg"
+                            alt="Alien: Romulus poster">
+                        <h3 class="movie-title">Alien: Romulus</h3>
+                        <p class="movie-meta">Horror · 1h 59m · 16+</p>
+                        <a class="btn btn-cinema-outline mt-auto"
+                            href="movie-details.html?movie=alien-romulus">Book tickets</a>
+                    </article>
+
+                    <article class="col-12 col-sm-6 col-lg-4 movie-card">
+                        <img class="movie-poster" src="../assets/images/posters/deadpool-wolverine.jpg"
+                            alt="Deadpool &amp; Wolverine poster">
+                        <h3 class="movie-title">Deadpool &amp; Wolverine</h3>
+                        <p class="movie-meta">Action · 2h 07m · 18+</p>
+                        <a class="btn btn-cinema-outline mt-auto"
+                            href="movie-details.html?movie=deadpool-wolverine">Book tickets</a>
+                    </article>
+
+                    <article class="col-12 col-sm-6 col-lg-4 movie-card">
+                        <img class="movie-poster" src="../assets/images/posters/despicable-me-4.jpg"
+                            alt="Despicable Me 4 poster">
+                        <h3 class="movie-title">Despicable Me 4</h3>
+                        <p class="movie-meta">Animation · 1h 34m · 6+</p>
+                        <a class="btn btn-cinema-outline mt-auto"
+                            href="movie-details.html?movie=despicable-me-4">Book tickets</a>
+                    </article>
+                </div>
+                <p class="catalog-pagination text-center">Page 1 of 1 · 6 movies</p>
+            </section>
+        </main>
+
+        <footer class="site-footer" id="site-info">
+            <div class="container site-container footer-layout">
+                <div>
+                    <a class="footer-brand" href="index.html">CINEMA+</a>
+                    <p class="mb-0">Easy online cinema booking</p>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="mailto:support@cinemaplus.kz">Contact: support@cinemaplus.kz</a></li>
+                    <li><a href="#site-info">Terms</a></li>
+                    <li><small>© 2026 Cinema+</small></li>
+                </ul>
+            </div>
+            <p class="container site-container demo-note">Student demo. Filtering, accounts and booking are not available yet. No payments are accepted.</p>
+        </footer>
+    </body>
+</html>

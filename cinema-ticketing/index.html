@@ -3,171 +3,102 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Cinema+ — discover movies, choose a showtime, and plan your next cinema visit.">
         <title>Cinema+ | Home</title>
-        <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
-
+        <link rel="icon" href="../assets/images/favicon.svg">
         <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
         <link rel="stylesheet" href="../css/common.css">
         <link rel="stylesheet" href="../css/home.css">
     </head>
     <body id="cinema-page">
         <header class="site-header">
-            <nav class="navbar navbar-expand-md" aria-label="Main navigation">
-                <div class="container site-container">
-                    <a class="navbar-brand brand" href="index.html" aria-label="Cinema+ home">
-                        <img src="../assets/images/logo.svg" alt="" width="146" height="32">
-                    </a>
-
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#main-navigation" aria-controls="main-navigation"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="main-navigation">
-                        <ul class="navbar-nav mx-auto">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="index.html" aria-current="page">
-                                    Home
-                                    <span class="nav-underline" aria-hidden="true"></span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="movies.html">Movies</a>
-                            </li>
-                            <li class="nav-item">
-                                <button class="nav-link unavailable" type="button" disabled title="Coming soon">My Tickets</button>
-                            </li>
-                            <li class="nav-item">
-                                <button class="nav-link" type="button" data-bs-toggle="modal"
-                                    data-bs-target="#help-modal">Help</button>
-                            </li>
-                        </ul>
-                        <button class="btn btn-outline-secondary btn-cinema-outline sign-in-button unavailable-button" type="button"
-                            disabled title="Coming soon">Sign In</button>
-                    </div>
-                </div>
+            <nav class="container site-container header-layout">
+                <a class="brand" href="index.html">
+                    <img src="../assets/images/logo.svg" alt="Cinema+" width="146" height="32">
+                </a>
+                <ul class="nav-links">
+                    <li><a class="active" href="index.html">Home<span class="nav-underline"></span></a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><span class="unavailable">My Tickets</span></li>
+                    <li><a href="#site-info">Help</a></li>
+                </ul>
+                <button class="btn btn-cinema-outline sign-in-button" type="button" disabled>Sign In</button>
             </nav>
         </header>
 
-        <main class="container site-container home-main" id="main-content">
+        <main class="container site-container home-main">
             <section class="search-hero">
-                <h1 id="hero-heading">Book cinema tickets in minutes</h1>
+                <h1>Book cinema tickets in minutes</h1>
                 <p>Find a movie, choose a convenient showtime, and reserve the best seats.</p>
-
-                <form class="row g-3 align-items-end movie-search" action="movies.html" method="get">
+                <form class="row g-3 align-items-end" action="movies.html" method="get">
                     <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="search-field">
-                            <label for="search-location">Location</label>
-                            <select class="form-select" id="search-location" name="location">
-                                <option value="astana">Astana</option>
-                                <option value="almaty">Almaty</option>
-                                <option value="shymkent">Shymkent</option>
-                            </select>
-                        </div>
+                        <label class="form-label" for="location">Location</label>
+                        <select class="form-select" id="location" name="location">
+                            <option value="astana">Astana</option>
+                            <option value="almaty">Almaty</option>
+                            <option value="shymkent">Shymkent</option>
+                        </select>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-2">
-                        <div class="search-field">
-                            <label for="search-date">Date</label>
-                            <select class="form-select" id="search-date" name="date">
-                                <option value="today">Today</option>
-                                <option value="tomorrow">Tomorrow</option>
-                                <option value="this-week">This week</option>
-                            </select>
-                        </div>
+                        <label class="form-label" for="date">Date</label>
+                        <select class="form-select" id="date" name="date">
+                            <option value="today">Today</option>
+                            <option value="tomorrow">Tomorrow</option>
+                            <option value="this-week">This week</option>
+                        </select>
                     </div>
                     <div class="col-12 col-sm-8 col-lg-5">
-                        <div class="search-field">
-                            <label for="search-query">Movie or cinema</label>
-                            <input class="form-control" id="search-query" name="q" type="search"
-                                placeholder="Search…" maxlength="100">
-                        </div>
+                        <label class="form-label" for="search">Movie or cinema</label>
+                        <input class="form-control" id="search" name="q" type="text" placeholder="Search…">
                     </div>
                     <div class="col-12 col-sm-4 col-lg-2">
-                        <button class="btn btn-primary btn-cinema w-100 search-button" type="submit">Search</button>
+                        <button class="btn btn-cinema w-100" type="submit">Search</button>
                     </div>
                 </form>
             </section>
 
-            <section class="home-section" id="now-showing">
-                <h2 id="movies-heading">Now Showing</h2>
-                
+            <section class="home-section">
+                <h2>Now Showing</h2>
                 <div class="row g-4">
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <article class="card movie-card h-100">
-                            <img class="movie-poster" src="../assets/images/posters/dune-part-two.jpg"
-                                alt="Dune: Part Two theatrical poster" width="400" height="600">
-                            <div class="card-body">
-                                <h3 class="movie-title">Dune: Part Two</h3>
-                                <ul class="movie-meta">
-                                    <li>Sci-Fi</li>
-                                    <li>• 2h 46m</li>
-                                    <li>• 12+</li>
-                                </ul>
-                                <a class="btn btn-outline-secondary btn-cinema-outline w-100 mt-auto"
-                                    href="movie-details.html?movie=dune-part-two"
-                                    aria-label="Book tickets for Dune: Part Two">Book tickets</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <article class="card movie-card h-100">
-                            <img class="movie-poster" src="../assets/images/posters/inside-out-2.jpg"
-                                alt="Inside Out 2 theatrical poster" width="400" height="600">
-                            <div class="card-body">
-                                <h3 class="movie-title">Inside Out 2</h3>
-                                <ul class="movie-meta">
-                                    <li>Animation</li>
-                                    <li>• 1h 36m</li>
-                                    <li>• 6+</li>
-                                </ul>
-                                <a class="btn btn-outline-secondary btn-cinema-outline w-100 mt-auto"
-                                    href="movie-details.html?movie=inside-out-2"
-                                    aria-label="Book tickets for Inside Out 2">Book tickets</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <article class="card movie-card h-100">
-                            <img class="movie-poster" src="../assets/images/posters/the-wild-robot.jpg"
-                                alt="The Wild Robot theatrical poster" width="400" height="600">
-                            <div class="card-body">
-                                <h3 class="movie-title">The Wild Robot</h3>
-                                <ul class="movie-meta">
-                                    <li>Family</li>
-                                    <li>• 1h 42m</li>
-                                    <li>• 6+</li>
-                                </ul>
-                                <a class="btn btn-outline-secondary btn-cinema-outline w-100 mt-auto"
-                                    href="movie-details.html?movie=the-wild-robot"
-                                    aria-label="Book tickets for The Wild Robot">Book tickets</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <article class="card movie-card h-100">
-                            <img class="movie-poster" src="../assets/images/posters/alien-romulus.jpg"
-                                alt="Alien: Romulus theatrical poster" width="400" height="600">
-                            <div class="card-body">
-                                <h3 class="movie-title">Alien: Romulus</h3>
-                                <ul class="movie-meta">
-                                    <li>Horror</li>
-                                    <li>• 1h 59m</li>
-                                    <li>• 16+</li>
-                                </ul>
-                                <a class="btn btn-outline-secondary btn-cinema-outline w-100 mt-auto"
-                                    href="movie-details.html?movie=alien-romulus"
-                                    aria-label="Book tickets for Alien: Romulus">Book tickets</a>
-                            </div>
-                        </article>
-                    </div>
+                    <article class="col-12 col-sm-6 col-lg-3 movie-card">
+                        <img class="movie-poster" src="../assets/images/posters/dune-part-two.jpg"
+                            alt="Dune: Part Two poster">
+                        <h3 class="movie-title">Dune: Part Two</h3>
+                        <p class="movie-meta">Sci-Fi · 2h 46m · 12+</p>
+                        <a class="btn btn-cinema-outline mt-auto"
+                            href="movie-details.html?movie=dune-part-two">Book tickets</a>
+                    </article>
+
+                    <article class="col-12 col-sm-6 col-lg-3 movie-card">
+                        <img class="movie-poster" src="../assets/images/posters/inside-out-2.jpg"
+                            alt="Inside Out 2 poster">
+                        <h3 class="movie-title">Inside Out 2</h3>
+                        <p class="movie-meta">Animation · 1h 36m · 6+</p>
+                        <a class="btn btn-cinema-outline mt-auto"
+                            href="movie-details.html?movie=inside-out-2">Book tickets</a>
+                    </article>
+
+                    <article class="col-12 col-sm-6 col-lg-3 movie-card">
+                        <img class="movie-poster" src="../assets/images/posters/the-wild-robot.jpg"
+                            alt="The Wild Robot poster">
+                        <h3 class="movie-title">The Wild Robot</h3>
+                        <p class="movie-meta">Family · 1h 42m · 6+</p>
+                        <a class="btn btn-cinema-outline mt-auto"
+                            href="movie-details.html?movie=the-wild-robot">Book tickets</a>
+                    </article>
+
+                    <article class="col-12 col-sm-6 col-lg-3 movie-card">
+                        <img class="movie-poster" src="../assets/images/posters/alien-romulus.jpg"
+                            alt="Alien: Romulus poster">
+                        <h3 class="movie-title">Alien: Romulus</h3>
+                        <p class="movie-meta">Horror · 1h 59m · 16+</p>
+                        <a class="btn btn-cinema-outline mt-auto"
+                            href="movie-details.html?movie=alien-romulus">Book tickets</a>
+                    </article>
                 </div>
             </section>
 
             <section class="home-section">
-                <h2 id="benefits-heading">Why book with Cinema+?</h2>
-    
+                <h2>Why book with Cinema+?</h2>
                 <ol class="benefits-grid">
                     <li class="benefit-card">
                         <span class="benefit-number">01</span>
@@ -188,7 +119,7 @@
             </section>
         </main>
 
-        <footer class="site-footer">
+        <footer class="site-footer" id="site-info">
             <div class="container site-container footer-layout">
                 <div>
                     <a class="footer-brand" href="index.html">CINEMA+</a>
@@ -196,53 +127,11 @@
                 </div>
                 <ul class="footer-links">
                     <li><a href="mailto:support@cinemaplus.kz">Contact: support@cinemaplus.kz</a></li>
-                    <li><button class="footer-link" type="button" data-bs-toggle="modal"
-                        data-bs-target="#terms-modal">Terms</button></li>
+                    <li><a href="#site-info">Terms</a></li>
                     <li><small>© 2026 Cinema+</small></li>
                 </ul>
             </div>
+            <p class="container site-container demo-note">Student demo. Filtering, accounts and booking are not available yet. No payments are accepted.</p>
         </footer>
-
-        
-        <div class="modal fade" id="help-modal" tabindex="-1" aria-labelledby="help-heading" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="modal-title fs-5" id="help-heading">Plan your cinema visit</h2>
-                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ol class="mb-3">
-                            <li>Find a movie in your city.</li>
-                            <li>Choose a cinema and showtime.</li>
-                            <li>Select your seats and review your order.</li>
-                        </ol>
-                        <p class="mb-0">This student demo currently includes the home page. Booking and account features are not available yet.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary btn-cinema" type="button" data-bs-dismiss="modal">Got it</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="terms-modal" tabindex="-1" aria-labelledby="terms-heading" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="modal-title fs-5" id="terms-heading">About this demo</h2>
-                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Cinema+ is a university midterm project by Kudaibergen Temirlan and Serikov Sunggat.</p>
-                        <p class="mb-0">Movies, age labels and contact details are sample content. This website does not sell tickets, accept payments or issue reservations.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary btn-cinema" type="button" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
     </body>
 </html>
