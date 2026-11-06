@@ -125,3 +125,39 @@
         margin-bottom: 12px;
     }
 }
+
+.faq-item {
+    margin-bottom: 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.faq-heading {
+    margin: 0;
+}
+
+.faq-question {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border: 0;
+    background-color: #f5f5f3;
+    color: #202020;
+    font: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.faq-question:hover {
+    background-color: #eeeeeb;
+}
+
+.faq-answer {
+    display: none;
+    margin: 0;
+    padding: 20px;
+    color: #707070;
+    font-size: 14px;
+}
