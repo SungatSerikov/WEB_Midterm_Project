@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
         <link rel="stylesheet" href="../css/common.css">
         <link rel="stylesheet" href="../css/movie-details.css">
+
+        <script src="../js/movies-data.js" defer></script>
+        <script src="../js/movie-details.js" defer></script>
     </head>
     <body id="cinema-page">
         <header class="site-header">
@@ -30,29 +33,33 @@
                 <a href="index.html">Home</a>
                 <span>›</span>
                 <a href="movies.html">Movies</a>
-                <span>› Dune: Part Two</span>
+                <span id="movie-breadcrumb"></span>
             </nav>
 
             <section class="row g-4 movie-overview">
                 <div class="col-12 col-md-4 col-lg-3">
-                    <img class="movie-poster" src="../assets/images/posters/dune-part-two.jpg"
-                        alt="Dune: Part Two poster">
+                   <img class="movie-poster" id="movie-poster" src="../assets/images/posters/dune-part-two.jpg" alt="Movie poster">
                 </div>
                 <div class="col-12 col-md-8 col-lg-9">
-                    <h1>Dune: Part Two</h1>
-                    <p class="movie-meta">Sci-Fi · Action · Adventure · 2h 46m · 12+ · PG-13</p>
+                    <h1 id="movie-title"></h1>
+                    <p class="movie-meta" id="movie-meta"></p>
+
                     <h2>Synopsis</h2>
-                    <p class="synopsis">Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the universe, he endeavors to prevent a terrible future only he can foresee.</p>
+                    <p class="synopsis" id="movie-description"></p>
                     <table class="movie-facts">
                         <tr>
-                            <th>Director</th>
-                            <td>Denis Villeneuve</td>
+                            <th scope="row">Genre</th>
+                            <td id="movie-genre"></td>
                         </tr>
                         <tr>
-                            <th>Cast</th>
-                            <td>Timothée Chalamet, Zendaya, Rebecca Ferguson, Josh Brolin, Austin Butler, Florence Pugh</td>
+                            <th scope="row">Duration</th>
+                            <td id="movie-duration"></td>
                         </tr>
-                    </table>
+                        <tr>
+                            <th scope="row">Age</th>
+                            <td id="movie-age"></td>
+                        </tr>
+                    </table>                    
                 </div>
             </section>
 
@@ -60,6 +67,7 @@
                 <h2>Choose Showtime</h2>
                 <p class="schedule-note">Demo schedule · 12–16 October 2026. The same showtimes apply to each date.</p>
                 <form action="seat-selection.html" method="get">
+                    <input type="hidden" name="movie" id="selected-movie">
                     <div class="date-field">
                         <label class="form-label" for="show-date">Date</label>
                         <select class="form-select" id="show-date" name="date">
@@ -116,7 +124,7 @@
 
                     <div class="booking-summary">
                         <div>
-                            <h3>Dune: Part Two</h3>
+                            <h3 id="booking-movie-title"></h3>
                             <p class="mb-0">Choose a showtime above, then select your seats.</p>
                         </div>
                         <button class="btn btn-cinema" type="submit">Select seats</button>
