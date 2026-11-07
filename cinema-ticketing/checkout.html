@@ -30,7 +30,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item"><a href="movies.html">Movies</a></li>
-                    <li class="breadcrumb-item"><a href="movie-details.html?movie=dune-part-two">Dune: Part Two</a></li>
+                    <li class="breadcrumb-item"><a href="movies.html" id="breadcrumb-movie-link">Movie</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Checkout</li>
                 </ol>
             </nav>
@@ -40,98 +40,99 @@
                 <p>Confirm the details of your selected session</p>
             </header>
 
-            <div class="row g-4 align-items-start">
-                <div class="col-12 col-lg-7">
-                    <section class="order-summary-card">
-                        <div class="order-movie-header">
-                            <img class="order-movie-poster" src="../assets/images/posters/dune-part-two.jpg"
-                                alt="Dune: Part Two poster" width="80" height="110">
-                            <div class="order-movie-info">
-                                <h2>Dune: Part Two</h2>
-                                <p class="order-movie-meta">Sci-Fi · 2h 46m · Esentai Mall</p>
-                                <p class="order-movie-session">Today, 12 Oct · 13:45 (IMAX 3D)</p>
-                            </div>
-                        </div>
-
-                        <hr class="order-divider">
-
-                        <div class="order-details-table">
-                            <div class="order-row">
-                                <span class="order-label">Selected Seats</span>
-                                <span class="order-value bold-text">Row D, Seats 5, 6</span>
-                            </div>
-                            <div class="order-row">
-                                <span class="order-label">Tickets (2 x Adult)</span>
-                                <span class="order-value bold-text">5,600 ₸</span>
-                            </div>
-                            <div class="order-row">
-                                <span class="order-label">Service Booking Fee</span>
-                                <span class="order-value bold-text">300 ₸</span>
-                            </div>
-                        </div>
-
-                        <hr class="order-divider">
-
-                        <div class="order-total-row">
-                            <span class="total-label">Total Amount</span>
-                            <span class="total-price">5,900 ₸</span>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="col-12 col-lg-5">
-                    <section class="payment-card">
-                        <h2>Payment Details</h2>
-
-                        <form class="payment-form" action="#" method="post">
-                            <div class="mb-3">
-                                <label class="form-label" for="cardholder-name">Cardholder Name</label>
-                                <input class="form-control payment-input" id="cardholder-name" name="cardholder"
-                                    type="text" placeholder="ALEX PROKHOROV" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label" for="card-number">Card Number</label>
-                                <input class="form-control payment-input" id="card-number" name="cardNumber"
-                                    type="text" placeholder="4000 1234 5678 9010" maxlength="19" required>
-                            </div>
-
-                            <div class="row g-2 mb-3">
-                                <div class="col-6">
-                                    <label class="form-label" for="expiry-date">Expiry Date</label>
-                                    <input class="form-control payment-input" id="expiry-date" name="expiry"
-                                        type="text" placeholder="12/28" maxlength="5" required>
-                                </div>
-                                <div class="col-6">
-                                    <label class="form-label" for="cvv">CVV/CVC</label>
-                                    <input class="form-control payment-input" id="cvv" name="cvv"
-                                        type="password" placeholder="***" maxlength="4" required>
+            <div id="checkout-content-wrapper">
+                <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-7">
+                        <section class="order-summary-card">
+                            <div class="order-movie-header">
+                                <img class="order-movie-poster" id="checkout-poster" src="" alt="Movie poster" width="80" height="110">
+                                <div class="order-movie-info">
+                                    <h2 id="checkout-title">-</h2>
+                                    <p class="order-movie-meta" id="checkout-meta">-</p>
+                                    <p class="order-movie-session" id="checkout-session">-</p>
                                 </div>
                             </div>
 
-                            <div class="mb-3">
-                                <label class="form-label" for="promo-code">Promo Code</label>
-                                <div class="input-group promo-group">
-                                    <input class="form-control payment-input" id="promo-code" name="promo"
-                                        type="text" placeholder="Enter code..">
-                                    <button class="btn btn-outline-secondary promo-btn" type="button">Apply</button>
+                            <hr class="order-divider">
+
+                            <div class="order-details-table">
+                                <div class="order-row">
+                                    <span class="order-label">Selected Seats</span>
+                                    <span class="order-value bold-text" id="checkout-seats-text">-</span>
+                                </div>
+                                <div class="order-row">
+                                    <span class="order-label" id="checkout-tickets-label">Tickets</span>
+                                    <span class="order-value bold-text" id="checkout-subtotal">-</span>
                                 </div>
                             </div>
 
-                            <div class="form-check terms-check mb-4">
-                                <input class="form-check-input" id="agree-terms" name="agree" type="checkbox" checked required>
-                                <label class="form-check-label" for="agree-terms">
-                                    I agree to the Terms &amp; Conditions and Refund Policy of Cinema+
-                                </label>
+                            <div class="mt-3">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="toggle-order-details">
+                                    Show extra details
+                                </button>
+                                <div id="extra-order-details" style="display: none;" class="mt-3 p-3 bg-light rounded border small">
+                                    <p class="mb-1"><strong>Ticket Type:</strong> Standard Admission (2,800 ₸ each)</p>
+                                    <p class="mb-1"><strong>Cinema Hall:</strong> Main Auditorium</p>
+                                    <p class="mb-0"><strong>Notice:</strong> Please arrive 15 minutes before the showtime.</p>
+                                </div>
                             </div>
 
-                            <button class="btn btn-pay-confirm w-100" type="submit">Pay &amp; Confirm (5,900 ₸)</button>
+                            <hr class="order-divider">
 
-                            <p class="ssl-notice">
-                                <span class="lock-icon" aria-hidden="true">&#128274;</span> Secure SSL encrypted payment transaction
-                            </p>
-                        </form>
-                    </section>
+                            <div class="order-total-row">
+                                <span class="total-label">Total Amount</span>
+                                <span class="total-price" id="checkout-total-price">0 ₸</span>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="col-12 col-lg-5">
+                        <section class="payment-card">
+                            <h2>Customer Details</h2>
+
+                            <form class="payment-form" id="booking-form" novalidate>
+                                <div class="mb-3">
+                                    <label class="form-label" for="full-name">Full Name</label>
+                                    <input class="form-control payment-input" id="full-name" name="fullName" type="text" placeholder="Temirlan Kudaibergen">
+                                    <div class="text-danger small mt-1" id="name-error"></div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label" for="email">Email Address</label>
+                                    <input class="form-control payment-input" id="email" name="email" type="email" placeholder="example@mail.com">
+                                    <div class="text-danger small mt-1" id="email-error"></div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label" for="phone">Phone Number</label>
+                                    <input class="form-control payment-input" id="phone" name="phone" type="tel" placeholder="+7 777 123 4567">
+                                    <div class="text-danger small mt-1" id="phone-error"></div>
+                                </div>
+
+                                <div class="form-check terms-check mb-4">
+                                    <input class="form-check-input" id="agree-terms" name="agree" type="checkbox">
+                                    <label class="form-check-label" for="agree-terms">
+                                        I agree to the Terms &amp; Conditions and Refund Policy of Cinema+
+                                    </label>
+                                    <div class="text-danger small mt-1" id="terms-error"></div>
+                                </div>
+
+                                <button class="btn btn-pay-confirm w-100" id="btn-submit-booking" type="submit">Confirm Booking</button>
+
+                                <p class="ssl-notice">
+                                    Student demo mode. No actual payment or card required.
+                                </p>
+                            </form>
+
+                            <div id="booking-success-card" style="display: none;" class="text-center p-3">
+                                <div class="alert alert-success mb-3">
+                                    <h4 class="alert-heading">Booking Confirmed!</h4>
+                                    <p class="mb-1" id="success-message-text"></p>
+                                </div>
+                                <a href="movies.html" class="btn btn-proceed w-100">Return to Catalogue</a>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
         </main>
@@ -150,5 +151,11 @@
             </div>
             <p class="container site-container demo-note">Student demo. Filtering, accounts and booking are not available yet. No payments are accepted.</p>
         </footer>
+
+        <script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="../js/movies-data.js"></script>
+        <script src="../js/sessions-data.js"></script>
+        <script src="../js/checkout.js"></script>
     </body>
 </html>
