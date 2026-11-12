@@ -45,6 +45,8 @@ function renderMovies(movieList) {
 
 const searchInput = document.querySelector("#search");
 const genreSelect = document.querySelector("#genre");
+const sortSelect = document.querySelector("#sort-by");
+const maxDurationSelect = document.querySelector("#max-duration");
 const filterForm = document.querySelector("#filter-form");
 const resetButton = document.querySelector("#reset-filters");
 const favoritesOnly = document.querySelector("#favorites-only");
@@ -53,6 +55,8 @@ const clearFavoritesButton = document.querySelector("#clear-favorites");
 function applyFilters() {
     const searchText = searchInput.value.trim().toLowerCase();
     const selectedGenre = genreSelect.value;
+    const selectedSort = sortSelect.value;
+    const maxDuration = maxDurationSelect.value;
     const favorites = getFavorites();
 
     const filteredMovies = movies.filter(function (movie) {
@@ -62,14 +66,36 @@ function applyFilters() {
 
         const matchesFavorites = !favoritesOnly.checked || favorites.includes(movie.id);
 
-        return matchesSearch && matchesGenre && matchesFavorites;
+        const matchesDuration = maxDuration === "all" || movie.durationMinutes <= Number(maxDuration);
+
+        return matchesSearch && matchesGenre && matchesFavorites && matchesDuration;
     });
+
+    if (selectedSort === "title-asc") {
+        filteredMovies.sort(function (a, b) {
+            return a.title.localeCompare(b.title);
+        });
+    } else if (selectedSort === "title-desc") {
+        filteredMovies.sort(function (a, b) {
+            return b.title.localeCompare(a.title);
+        });
+    } else if (selectedSort === "duration-asc") {
+        filteredMovies.sort(function (a, b) {
+            return a.durationMinutes - b.durationMinutes;
+        });
+    } else if (selectedSort === "duration-desc") {
+        filteredMovies.sort(function (a, b) {
+            return b.durationMinutes - a.durationMinutes;
+        });
+    }
 
     renderMovies(filteredMovies);
 }
 
 searchInput.addEventListener("input", applyFilters);
 genreSelect.addEventListener("change", applyFilters);
+sortSelect.addEventListener("change", applyFilters);
+maxDurationSelect.addEventListener("change", applyFilters);
 favoritesOnly.addEventListener("change", applyFilters);
 
 clearFavoritesButton.addEventListener("click", function () {
@@ -86,6 +112,8 @@ filterForm.addEventListener("submit", function (event) {
 resetButton.addEventListener("click", function () {
     searchInput.value = "";
     genreSelect.value = "all";
+    sortSelect.value = "default";
+    maxDurationSelect.value = "all";
     favoritesOnly.checked = false;
     applyFilters();
 });

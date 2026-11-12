@@ -39,7 +39,7 @@
                         <input class="form-control" id="search" name="q" type="search" placeholder="Movie title...">
                     </div>
 
-                    <div class="col-12 col-sm-8 col-md-4">
+                    <div class="col-12 col-md-6">
                         <label class="form-label" for="genre">Genre</label>
                         <select class="form-select" id="genre" name="genre">
                             <option value="all">All genres</option>
@@ -51,11 +51,33 @@
                         </select>
                     </div>
 
-                    <div class="col-12 col-sm-4 col-md-2">
+                    <div class="col-12 col-sm-6 col-md-5">
+                        <label class="form-label" for="sort-by">Sort by</label>
+                        <select class="form-select" id="sort-by" name="sort">
+                            <option value="default">Default order</option>
+                            <option value="title-asc">Title: A–Z</option>
+                            <option value="title-desc">Title: Z–A</option>
+                            <option value="duration-asc">Shortest first</option>
+                            <option value="duration-desc">Longest first</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-5">
+                        <label class="form-label" for="max-duration">Max duration</label>
+                        <select class="form-select" id="max-duration" name="maxDuration">
+                            <option value="all">Any duration</option>
+                            <option value="90">Up to 90 minutes</option>
+                            <option value="120">Up to 120 minutes</option>
+                            <option value="150">Up to 150 minutes</option>
+                            <option value="180">Up to 180 minutes</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-md-2">
                         <button class="btn btn-cinema-outline w-100" id="reset-filters" type="button">Reset</button>
                     </div>
                 </form>
-                <p class="filter-note">Results update as you type or choose a genre.</p>
+                <p class="filter-note">Results update as you type, change filters or choose a sort order.</p>
                 <div class="d-flex flex-wrap align-items-center gap-3 mt-3">
                     <div class="form-check">
                         <input class="form-check-input" id="favorites-only" type="checkbox">
