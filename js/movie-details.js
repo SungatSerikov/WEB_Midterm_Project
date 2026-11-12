@@ -39,6 +39,20 @@ if (selectedMovie) {
 
     document.querySelector("#movie-age").textContent =
         selectedMovie.age;
+
+    const favoriteMovieButton = document.querySelector("#favorite-movie");
+
+    updateFavoriteButton(favoriteMovieButton, selectedMovie.id);
+
+    favoriteMovieButton.addEventListener("click", function () {
+        if (toggleFavorite(selectedMovie.id)) {
+            updateFavoriteButton(favoriteMovieButton, selectedMovie.id);
+        }
+    });
+
+    window.addEventListener("pageshow", function () {
+        updateFavoriteButton(favoriteMovieButton, selectedMovie.id);
+    });
 } else {
     document.title = "Cinema+ | Movie not found";
 
