@@ -245,3 +245,182 @@ a {
         gap: 6px;
     }
 }
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-toggle-btn {
+    min-width: 112px;
+}
+
+body.dark-theme {
+    color: #f1f1f1;
+    background-color: #141414;
+}
+
+body.dark-theme a {
+    color: #f1f1f1;
+}
+
+body.dark-theme .brand img {
+    filter: brightness(0) invert(1);
+}
+
+body.dark-theme .site-header,
+body.dark-theme .site-footer {
+    background-color: #141414;
+    border-color: #2e2e2e;
+}
+
+body.dark-theme .nav-links a {
+    color: #a8a8a8;
+}
+
+body.dark-theme .nav-links .active {
+    color: #ffffff;
+}
+
+body.dark-theme .movie-meta,
+body.dark-theme .form-label,
+body.dark-theme .site-footer p,
+body.dark-theme .footer-links a,
+body.dark-theme .footer-links small,
+body.dark-theme .search-hero p,
+body.dark-theme .benefit-card p,
+body.dark-theme .faq-answer,
+body.dark-theme .catalog-intro p,
+body.dark-theme .catalog-pagination,
+body.dark-theme .detail-breadcrumb,
+body.dark-theme .detail-breadcrumb a,
+body.dark-theme .synopsis,
+body.dark-theme .movie-facts td,
+body.dark-theme .schedule-note,
+body.dark-theme .showtime small,
+body.dark-theme .booking-summary p,
+body.dark-theme .breadcrumb-item a,
+body.dark-theme .info-label,
+body.dark-theme .screen-text,
+body.dark-theme .legend-item,
+body.dark-theme .seat-cost,
+body.dark-theme .checkout-header p,
+body.dark-theme .order-movie-meta,
+body.dark-theme .order-label,
+body.dark-theme .terms-check,
+body.dark-theme .terms-check label,
+body.dark-theme .ssl-notice,
+body.dark-theme .text-muted {
+    color: #a8a8a8 !important;
+}
+
+body.dark-theme .breadcrumb-item.active,
+body.dark-theme .info-value,
+body.dark-theme .seat-name,
+body.dark-theme .total-sum,
+body.dark-theme .checkout-header h1,
+body.dark-theme .order-movie-info h2,
+body.dark-theme .order-movie-session,
+body.dark-theme .order-value,
+body.dark-theme .total-label,
+body.dark-theme .total-price,
+body.dark-theme .payment-card h2,
+body.dark-theme .selected-seats-card h2 {
+    color: #f1f1f1;
+}
+
+body.dark-theme .search-hero,
+body.dark-theme .catalog-filters,
+body.dark-theme .faq-question,
+body.dark-theme .showtime,
+body.dark-theme .booking-summary,
+body.dark-theme .session-info-bar,
+body.dark-theme .selected-seats-card,
+body.dark-theme .payment-card,
+body.dark-theme .bg-light {
+    background-color: #1f1f1f !important;
+    border-color: #333333 !important;
+    color: #f1f1f1 !important;
+}
+
+body.dark-theme .faq-question:hover {
+    background-color: #2a2a2a;
+}
+
+body.dark-theme .benefit-card,
+body.dark-theme .cinema-group,
+body.dark-theme .faq-item,
+body.dark-theme .hall-layout-card,
+body.dark-theme .selected-seat-item,
+body.dark-theme .order-summary-card,
+body.dark-theme .ticket-card {
+    background-color: #1a1a1a;
+    border-color: #333333;
+    color: #f1f1f1;
+}
+
+body.dark-theme .order-divider,
+body.dark-theme .summary-divider {
+    border-top-color: #333333;
+}
+
+body.dark-theme .form-control,
+body.dark-theme .form-select,
+body.dark-theme .payment-input {
+    background-color: #242424;
+    border-color: #3a3a3a;
+    color: #f1f1f1;
+}
+
+body.dark-theme .form-control::placeholder {
+    color: #888888;
+}
+
+#cinema-page.dark-theme .btn-cinema-outline {
+    color: #f1f1f1;
+    background-color: #242424;
+    border-color: #3a3a3a;
+}
+
+#cinema-page.dark-theme .btn-cinema-outline:hover {
+    color: #ffffff;
+    background-color: #333333;
+}
+
+body.dark-theme .seat {
+    background-color: #242424;
+    border-color: #444444;
+    color: #f1f1f1;
+}
+
+body.dark-theme .seat:hover:not(:disabled) {
+    border-color: #f1f1f1;
+}
+
+body.dark-theme .seat.occupied {
+    background-color: #3a3a3a;
+    border-color: #3a3a3a;
+    color: #777777;
+}
+
+body.dark-theme .seat.selected {
+    background-color: #c94228;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+body.dark-theme .badge-available {
+    background-color: #242424;
+    border-color: #444444;
+}
+
+body.dark-theme .badge-occupied {
+    background-color: #3a3a3a;
+}
+
+@media (max-width: 575px) {
+    .theme-toggle-btn {
+        min-width: 90px;
+    }
+}
