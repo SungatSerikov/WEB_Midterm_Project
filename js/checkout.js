@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="text-center py-5">
                     <h2 class="mb-3">Invalid Order Data</h2>
                     <p class="text-muted mb-4">No valid session or seats were selected. Please select your seats again.</p>
-                    <a href="movies.html" class="btn btn-proceed d-inline-block px-4">Browse Movies</a>
+                    <a href="movies.html" class="btn btn-cinema d-inline-block px-4">Browse Movies</a>
                 </div>
             `;
         }
@@ -51,8 +51,15 @@ document.addEventListener("DOMContentLoaded", function () {
         breadcrumbMovieLink.href = `movie-details.html?movie=${currentMovie.id}`;
     }
 
-    const TICKET_PRICE = 2800;
-    const totalAmount = seatsList.length * TICKET_PRICE;
+    const previewBooking = new Booking(
+        "PREVIEW",
+        currentMovie.id,
+        sessionDate,
+        currentSession.id,
+        seatsList,
+        "Confirmed"
+    );
+    const totalAmount = previewBooking.calculateTotal();
 
     if (moviePoster) {
         moviePoster.src = `../assets/images/posters/${currentMovie.poster}`;
@@ -93,8 +100,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const successCard = document.getElementById("booking-success-card");
     const successText = document.getElementById("success-message-text");
 
+    let isSubmitted = false;
+
     bookingForm.addEventListener("submit", function (event) {
         event.preventDefault();
+
+        if (isSubmitted) {
+            return;
+        }
 
         let isValid = true;
 
@@ -129,9 +142,25 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (isValid) {
+            isSubmitted = true;
+
+            const newBooking = new Booking(
+                "BK-" + Date.now().toString().slice(-6),
+                currentMovie.id,
+                sessionDate,
+                currentSession.id,
+                seatsList,
+                "Confirmed",
+                nameValue,
+                emailValue,
+                phoneValue
+            );
+
+            addBooking(newBooking);
+
             bookingForm.style.display = "none";
             successCard.style.display = "block";
-            successText.textContent = `Thank you, ${nameValue}! Your booking for ${seatsList.length} ticket(s) to "${currentMovie.title}" has been confirmed. Confirmation details sent to ${emailValue}.`;
+            successText.textContent = `Thank you, ${nameValue}! Booking #${newBooking.id} for ${seatsList.length} ticket(s) to "${currentMovie.title}" has been saved to My Tickets.`;
         }
     });
 });

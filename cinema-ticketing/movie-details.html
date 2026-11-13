@@ -10,7 +10,9 @@
         <link rel="stylesheet" href="../css/movie-details.css">
 
         <script src="../js/movies-data.js" defer></script>
+        <script src="../js/favorites.js" defer></script>
         <script src="../js/movie-details.js" defer></script>
+        <script src="../js/theme.js" defer></script>
     </head>
     <body id="cinema-page">
         <header class="site-header">
@@ -43,6 +45,9 @@
                 <div class="col-12 col-md-8 col-lg-9">
                     <h1 id="movie-title"></h1>
                     <p class="movie-meta" id="movie-meta"></p>
+                    <button class="btn btn-cinema-outline mb-3" id="favorite-movie" type="button">
+                        Add to favorites
+                    </button>
 
                     <h2>Synopsis</h2>
                     <p class="synopsis" id="movie-description"></p>
