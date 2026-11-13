@@ -13,6 +13,8 @@
         <script src="../js/home.js" defer></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
         <script src="../js/faq.js" defer></script>
+        <script src="../js/api-movies.js" defer></script>
+        <script src="../js/theme.js" defer></script>
     </head>
     <body id="cinema-page">
         <header class="site-header">
@@ -51,6 +53,17 @@
                 <div class="row g-4" id="home-movies">
                     
                 </div>
+            </section>
+
+            <section class="home-section">
+                <h2>Animation Picks</h2>
+                <p>Discover animated films from Studio Ghibli.</p>
+
+                <p id="api-status" role="status">Loading movies...</p>
+
+                <button class="btn btn-cinema-outline mb-3" id="retry-movies" type="button" hidden>Try again </button>
+
+                <div class="row g-4" id="api-movies"></div>
             </section>
 
             <section class="home-section">

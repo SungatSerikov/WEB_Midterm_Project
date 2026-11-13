@@ -1,0 +1,153 @@
+.tickets-main {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.tickets-header {
+    margin-bottom: 32px;
+}
+
+.tickets-header h1 {
+    margin: 0 0 10px;
+    font-size: 40px;
+}
+
+.tickets-header p {
+    margin: 0;
+    color: #707070;
+    font-size: 15px;
+}
+
+.ticket-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 24px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.ticket-card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.ticket-poster {
+    width: 68px;
+    height: 96px;
+    border-radius: 8px;
+    object-fit: cover;
+    background-color: #f5f5f3;
+}
+
+.ticket-title {
+    margin: 0 0 6px;
+    font-size: 19px;
+}
+
+.ticket-id {
+    display: block;
+    margin-bottom: 6px;
+    color: #707070;
+    font-size: 12px;
+}
+
+.ticket-status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-confirmed {
+    color: #166534;
+    background-color: #dcfce7;
+}
+
+.status-cancelled {
+    color: #991b1b;
+    background-color: #fee2e2;
+}
+
+.ticket-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 14px;
+}
+
+.ticket-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.ticket-label {
+    color: #707070;
+}
+
+.ticket-value {
+    font-weight: bold;
+    text-align: right;
+}
+
+.ticket-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 16px;
+}
+
+.ticket-total {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.empty-tickets-box {
+    padding: 40px 24px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background-color: #f5f5f3;
+    text-align: center;
+}
+
+body.dark-theme .tickets-header p,
+body.dark-theme .ticket-id,
+body.dark-theme .ticket-label {
+    color: #a8a8a8;
+}
+
+body.dark-theme .ticket-details {
+    border-top-color: #333333;
+    border-bottom-color: #333333;
+}
+
+body.dark-theme .empty-tickets-box {
+    background-color: #1f1f1f;
+    border-color: #333333;
+}
+
+@media (max-width: 575px) {
+    .tickets-main {
+        padding-top: 24px;
+        padding-bottom: 48px;
+    }
+
+    .tickets-header h1 {
+        font-size: 32px;
+    }
+
+    .ticket-card {
+        padding: 20px;
+    }
+}
